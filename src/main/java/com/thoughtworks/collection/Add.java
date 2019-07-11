@@ -70,28 +70,28 @@ public class Add {
         return arrayList.stream().filter((item) -> item % 2 != 0).mapToInt(item -> item*3+5).sum();
     }
 
-    public double getMedianOfEven(List<Integer> arrayList) {
-        throw new NotImplementedException();
-    }
+//    public double getMedianOfEven(List<Integer> arrayList) {
+//        throw new NotImplementedException();
+//    }
 
     public double getAverageOfEven(List<Integer> arrayList) {
-
         return arrayList.stream().filter(item -> item%2 ==0).mapToDouble(item -> item).average().orElse(0);
     }
 
     public boolean isIncludedInEvenIndex(List<Integer> arrayList, Integer specialElment) {
-        throw new NotImplementedException();
+        List<Integer> result = arrayList.stream().filter(item -> item%2 ==0).map(item -> item).collect(Collectors.toList());
+        return result.indexOf(specialElment)!= -1;
     }
 
     public List<Integer> getUnrepeatedFromEvenIndex(List<Integer> arrayList) {
         throw new NotImplementedException();
     }
 
-    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
-        throw new NotImplementedException();
-    }
+//    public List<Integer> sortByEvenAndOdd(List<Integer> arrayList) {
+//        throw new NotImplementedException();
+//    }
 
-    public List<Integer> getProcessedList(List<Integer> arrayList) {
-        throw new NotImplementedException();
-    }
+//    public List<Integer> getProcessedList(List<Integer> arrayList) {
+//        throw new NotImplementedException();
+//    }
 }
